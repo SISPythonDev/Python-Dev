@@ -57,3 +57,11 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Hopefully, we can prevent uploading keys here
+*.key
+*.pem
+*.pgp
+*.cer
+*.crt
+*.pub
