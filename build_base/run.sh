@@ -118,10 +118,14 @@ if [ -e $PYMAIN ]; then
   exit 1
 fi
 
-mkdir $PROJECT 2>/dev/null
+# Trying to build using virtualenv
+virtualenv $PROJECT 2>&1 1>/dev/null
+if [ $? != 0 ]; then
+  mkdir $PROJECT 2>/dev/null
+  mkdir $PROJECT/lib 2>/dev/null
+if
 mkdir $PROJECT/config 2>/dev/null
 mkdir $PROJECT/src 2>/dev/null
-mkdir $PROJEC/lib 2>/dev/null
 
 echo "Please add any comments about your project"
 read COMMENTS
