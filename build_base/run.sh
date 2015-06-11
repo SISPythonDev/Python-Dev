@@ -126,6 +126,7 @@ if [ $? != 0 ]; then
 fi
 mkdir $PROJECT/config 2>/dev/null
 mkdir $PROJECT/src 2>/dev/null
+mkdir $PROJECT/log 2>/dev/null
 # Including XML files for using pyDev extension
 SCRIPTNAME=$(basename "$0")
 RUNPATH=$(echo $0 | sed -e "s/${SCRIPTNAME}//g")
