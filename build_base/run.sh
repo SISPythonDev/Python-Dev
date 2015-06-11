@@ -123,9 +123,15 @@ virtualenv $PROJECT 2>&1 1>/dev/null
 if [ $? != 0 ]; then
   mkdir $PROJECT 2>/dev/null
   mkdir $PROJECT/lib 2>/dev/null
-if
+fi
 mkdir $PROJECT/config 2>/dev/null
 mkdir $PROJECT/src 2>/dev/null
+# Including XML files for using pyDev extension
+SCRIPTNAME=$(basename "$0")
+RUNPATH=$(echo $0 | sed -e "s/${SCRIPTNAME}//g")
+XMLPATH="${RUNPATH}xml_templates"
+cat ${XMLPATH}/project.xml | sed -e "s/@PROJECT@/${PROJECT}/g" > ./$PROJECT/.project
+cp ${XMLPATH}/pydevproject.xml ./$PROJECT/.pydevproject
 
 echo "Please add any comments about your project"
 read COMMENTS
