@@ -73,4 +73,7 @@ if [ "$FINDPGP" != "" ]; then
   echo $(tput sgr 0)
 fi
 echo "Please validate none of the above are not hardcoded keys"
+echo ""
+echo "Clearing compiled files"
+find $PROJECT -name "*.pyc" -delete
 exit 0
