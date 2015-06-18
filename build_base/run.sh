@@ -149,7 +149,7 @@ echo "" >> $PYMAIN
 echo "__author__     = \"$(echo $AUTHOR | sed -e 's/\s+//g')\"" >> $PYMAIN
 echo "__copyright__  = \"$(echo $COPYRIGHT | sed -e 's/\s+//g')\"" >> $PYMAIN
 echo "__credits__    = \"$(echo $CREDITS | sed -e 's/\s+//g')\"" >> $PYMAIN
-echo "__credits__    = \"$(echo $VERSION | sed -e 's/\s+//g')\"" >> $PYMAIN
+echo "__version__    = \"$(echo $VERSION | sed -e 's/\s+//g')\"" >> $PYMAIN
 echo "__maintainer__ = \"$(echo $MAINTAINER | sed -e 's/\s+//g')\"" >> $PYMAIN
 echo "__email__      = \"$(echo $EMAIL | sed -e 's/\s+//g')\"" >> $PYMAIN
 echo "__status__     = \"$(echo $STATUS | sed -e 's/\s+//g')\"" >> $PYMAIN
